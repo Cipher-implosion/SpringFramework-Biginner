@@ -3,23 +3,23 @@
 <mapper namespace="com.example.webapp.repository.ToDoMapper">
 	<!-- 全件検索 -->
 	<select id="selectAll" resultType="com.example.webapp.entity.ToDo">
-		SELECT id, todo, detail, create_at as createAt,
-		update_at as updateAt FROM todos
+		SELECT id, todo, detail, created_at as createAt,
+		updated_at as updateAt FROM todos
 	</select>
 	<!-- 1件検索 -->
 	<select id="selectById" resultType="com.example.webapp.entity.ToDo">
-		SELECT id, todo, detail, create_at as createAt,
-		update_at as updateAt FROM todos WHERE id = #{id}
+		SELECT id, todo, detail, created_at as creatdeAt,
+		updated_at as updatedAt FROM todos WHERE id = #{id}
 	</select>
 	<!-- 登録 -->
 	<insert id="insert">
-		INSERT INTO todos (todo, dretail, create_at, Update_at)
+		INSERT INTO todos (todo, detail, created_at, updated_at)
 		VALUES
 		(#{todo}, #{detail}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
 	</insert>
 	<update id="update">
 		UPDATE todos SET todo = #{todo}, detail = #{detail},
-		update_at, CURRENT_TIMESTAMP WHERE id =#{id}
+		updatde_at, CURRENT_TIMESTAMP WHERE id =#{id}
 	</update>
 	<!-- 削除 -->
 	<delete id="delete">
