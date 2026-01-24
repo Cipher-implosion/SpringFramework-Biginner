@@ -19,7 +19,7 @@
 	</insert>
 	<update id="update">
 		UPDATE todos SET todo = #{todo}, detail = #{detail},
-		updatde_at, CURRENT_TIMESTAMP WHERE id =#{id}
+		updated_at = CURRENT_TIMESTAMP WHERE id =#{id}
 	</update>
 	<!-- 削除 -->
 	<delete id="delete">
