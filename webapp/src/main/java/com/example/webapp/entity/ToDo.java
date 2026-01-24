@@ -20,7 +20,7 @@ public class ToDo {
 	/** すること詳細 */
 	private String detail;
 	/** 作成日時 */
-	private LocalDateTime creaatedAt;
+	private LocalDateTime createdAt;
 	/** 更新日時 */
 	private LocalDateTime updatedAt;
 }
