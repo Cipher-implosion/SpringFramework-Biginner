@@ -1,4 +1,4 @@
-package com.example.webapp;
+package com.example.webapp.Service;
 
 import java.util.List;
 
@@ -32,5 +32,5 @@ public interface ToDoService {
 	/**
 	 * 「すること」を削除します。 
 	 */
-	void deleteToDo(ToDo toDo);
+	void deleteToDo(Integer Id);
 }
