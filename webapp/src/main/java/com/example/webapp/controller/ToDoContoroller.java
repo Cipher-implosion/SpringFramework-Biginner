@@ -27,7 +27,7 @@ public class ToDoContoroller {
 	 * 「すること」の一覧を表示します。
 	 */
 	@GetMapping
-	public String kist(Model model) {
+	public String list(Model model) {
 		model.addAttribute("todos", toDoService.findAllToDo());
 		return "todo/list";
 	}
@@ -48,7 +48,7 @@ public class ToDoContoroller {
 			// 対象データがない場合はフラッシュメッセージを設定
 			attributes.addFlashAttribute("errorMessage", "対象データがありません");
 			// リダイレクト
-			return "redirect;/todos";
+			return "redirect:/todos";
 		}
 	}
 }
