@@ -8,7 +8,7 @@
 	<h2 th:if="${toDoForm.isNew}">新規ToDo登録</h2>
 	<h2 th:unless="${toDoForm.isNew}">ToDo編集</h2>
 	<!-- アクション：登録 or 編集 -->
-	<form th:action="${toDoForm.isNew} ? @{/todo/save} : @{/todo/update}"
+	<form th:action="${toDoForm.isNew} ? @{/todos/save} : @{/todos/update}"
 		th:object="${toDoForm}" method="post">
 		<!-- idは更新時に必要のため、hiddenで待つ -->
 		<input type="hidden" th:field="*{id}">
